@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Posts</h1>
+      <ul class="list-group ">
+        <app-postit *ngFor="let mypostit of postitTab"
+            [title] = "mypostit.title"
+            [content]="mypostit.content"
+            [created_at]="mypostit.created_at" >
+      </app-postit>
+      </ul>
+    </div>
+  </div>
+</div>

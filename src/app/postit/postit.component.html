@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+          <li [ngClass]="{'list-group-item': true,
+                          'list-group-item-success': loveIts > 0,
+                          'list-group-item-danger': loveIts < 0}">
+                      
+                        <div class="col">
+                          <div class="font-weight-bold" >
+                            <h3>{{ title }} </h3>
+                          </div>
+                        </div>
+                      
+                        <div class="col">
+                          <div class="text-right">
+                            <p [ngStyle]="{'color':'grey','font-weight': 'bold','font-style':'italic'}"> {{ created_at|date: 'short' }}</p>
+                          </div>
+                        </div>
+     
+                    <p>{{ content }}</p>
+                    <br/>
+                    <button class="btn btn-success" (click)="like()"> Love It </button>
+                    <button class="btn btn-danger" (click)="dislike()"> don't love it </button>
+          </li> 
+      </div>
+    </div>
